@@ -24,9 +24,9 @@ The install path for *Coach Installer*. Some development work outstanding so ple
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$installPath
+    		$installPath
 
 **Value**
 
@@ -48,9 +48,9 @@ Whether *SSL* should be enabled or not.
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$isSSL
+    		$isSSL
 
 **Value**
 
@@ -62,7 +62,7 @@ Whether *SSL* should be enabled or not.
 
 -------
 
-System Administrator Username
+Coach System Administrator Username
 .............................
 
 Sets the *Coach* System Administrator username.
@@ -70,9 +70,9 @@ This is only required for a first-time installation. Where Coach is being upgrad
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$sysAdminUsername
+    		$sysAdminUsername
 
 **Value**
 
@@ -91,9 +91,9 @@ The time of day that the *Coach Scheduler Service* will run. Accepts 24 hour clo
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$schedulerTriggerTime
+    		$schedulerTriggerTime
 
 **Value**
 
@@ -114,9 +114,9 @@ Don't use *Coach Instrumentation* property in ``config.ps1``, if it is not neede
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$installInstrumentation
+    		$installInstrumentation
 
 **Value**
 
@@ -143,9 +143,9 @@ The name of IIS Application Pool that *Coach* will be added to.
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$appPoolName
+    		$appPoolName
 
 **Value**
 
@@ -164,9 +164,9 @@ The IIS Web Site Name that *Coach* Web Application will be part of.
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$iisWebSiteName
+    		$iisWebSiteName
 
 **Value**
 
@@ -186,9 +186,9 @@ This can be left as *Default Value* ``Coach`` but can be modified to fit with br
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$appName
+    		$appName
 
 **Value**
 
@@ -216,9 +216,9 @@ Use this property if the Instance name is not changing, but if the Instance name
 
 **Property Name:**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$dbInstanceName
+    		$dbInstanceName
 
 **Value**
 
@@ -240,9 +240,9 @@ If persisting to ``config.ps1`` is a problem then use *Qualtrak Coach Installer*
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$dbLoginName
+    		$dbLoginName
 
 **Value**
 
@@ -271,9 +271,9 @@ Don't use *Authentication Route* property in ``config.ps1``, if it is not needed
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$authenticationRoute
+    		$authenticationRoute
 
 **Value**
 
@@ -293,9 +293,9 @@ Don't use *Machine Validation Key* property in ``config.ps1``, if it is not need
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$machineValidationKey
+    		$machineValidationKey
 
 **Value**
 
@@ -315,9 +315,9 @@ Don't use *Machine Validation Key* property in ``config.ps1``, if it is not need
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$machineDecryptionKey
+    		$machineDecryptionKey
 
 **Value**
 
@@ -337,9 +337,9 @@ Don't use *Authentication Forms Name* property in ``config.ps1``, if it is not n
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$formsName
+    		$formsName
 
 **Value**
 
@@ -359,9 +359,9 @@ Don't use *Authentication Forms Domain* property in ``config.ps1``, if it is not
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$formsDomain
+    		$formsDomain
 
 **Value**
 
@@ -388,11 +388,11 @@ Windows Authentication
 Enables Windows Authentication in *Coach*. This also requires the *Active Directory Group Name* property to be set.
 Don't use *Windows Authentication* property in ``config.ps1``, if it is not needed!
 
-** Property Name**
+**Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$isWindowsAuth
+    		$isWindowsAuth
 
 **Value**
 
@@ -412,9 +412,9 @@ Don't use *Active Directory Group Name* property in ``config.ps1``, if it is not
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$activeDirectoryGroupName
+    		$activeDirectoryGroupName
 
 **Value**
 
@@ -442,9 +442,9 @@ Use this property if the same Recorder IP address is used for all deployments. I
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$recorderIpAddress
+    		$recorderIpAddress
 
 **Value**
 
@@ -463,9 +463,9 @@ The Database instance name that the Recorder uses for persisting recordings.
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$dbRecorderInstance
+    		$dbRecorderInstance
 
 **Value**
 
@@ -484,9 +484,9 @@ The Database login (user) name that the Recorder uses for persisting recordings.
 
 **Property Name**
 
-.. code-block:: powershell
+    .. code-block:: powershell
 
-		$dbRecorderLoginName
+    		$dbRecorderLoginName
 
 **Value**
 
@@ -501,10 +501,137 @@ The Database login (user) password that the Recorder uses for persisting recordi
 
 **Property Name**
 
-		$dbRecorderPasswd
+    .. code-block:: powershell
+
+    		$dbRecorderPasswd
 
 **Value**
 
 	Single quoted string.
+
+-------
+
+HA (High Availability)
+----------------------
+
+HA specific properties currently for File sharing and Caching.
+Applicable only for Coach App Installer and its config file: ``config.app.ps1``.
+
+Those properties are included in ``config.app.ps1``, but commented out by default.
+
+To setup HA:
+
+* **Fileshare**: it is required to set values for File share Username, Password and Path. If not. it will not be applied!
+* **Caching**: it is required to set values for Caching Mode, IP and Port. If not, it will not be applied!
+
+-------
+
+File share Username
+...................
+
+The File share username used for Coach attachments folder on server.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+    		$fileShareUsername
+
+**Value**
+
+	Single quoted string.
+
+-------
+
+File share Password
+...................
+
+The File share password used for Coach attachments folder on server.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+    		$fileSharePassword
+
+**Value**
+
+	Single quoted string.
+
+-------
+
+File share Path
+...............
+
+The File share path used for Coach attachments folder on server.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+    		$fileSharePath
+
+**Value**
+
+	Single quoted string.
+
+-------
+
+Caching Mode
+............
+
+The ASP.NET caching mode, currently only supported is `StateServer` in future there will be support for `SqlServer` caching mode.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+    		$cachingMode
+
+**Value**
+
+	Single quoted string. Currently only supported is `StateServer`.
+
+**Default Value**
+
+	``'StateServer'``
+
+-------
+
+Caching IP
+..........
+
+The ASP.NET caching IP address.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+    		$cachingIp
+
+**Value**
+
+	Single quoted string. Valid IP address or DNS name.
+
+-------
+
+Caching Port
+............
+
+The ASP.NET caching IP address Port.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+		    $cachingPort
+
+**Value**
+
+	Integer value. Greater than zero (0).
+
+**Default Value**
+
+	``42424``
 
 -------

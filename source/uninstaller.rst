@@ -15,12 +15,12 @@ The update to new release and full *Coach Uninstaller*:
 Usage
 -----
 
-- Get Help for *Qualtrak Coach Installer* Cmdlet ``Uninstall-Coach``
+- Get Help for *Qualtrak Coach Installer* Cmdlet ``Coach-Uninstall``
 
 .. code-block:: powershell
 
-		Get-Help Uninstall-Coach -Full
-		Uninstall-Coach -?
+		Get-Help Coach-Uninstall -Full
+		Coach-Uninstall -?
 
 - Run ``Uninstall-Coach`` to uninstall *Coach*. See "*Examples*" for more info or usage.
 
@@ -28,26 +28,26 @@ Examples
 --------
 
 .. note:
-    - See more info about ``Uninstall-Coach`` parameters in "*Parameters*" section.
+    - See more info about ``Coach-Uninstall`` parameters in "*Parameters*" section.
     - Please use single quotes ('') around parameter values, double quotes ("") values evaluate as *Powershell* statement, so it can have undesired effect!
 
 - Minimal usage, used for update to new release version, removes files and Coach binaries, safe to use:
 
 .. code-block:: powershell
 
-		Uninstall-Coach
+		Coach-Uninstall
 
 - Minimal usage for full uninstall, used for complete remove of Coach from system, **beware of losing data**, unsafe to use.
 
 .. code-block:: powershell
 
-		Uninstall-Coach -Full -DbPasswd '$ecRT'
+		Coach-Uninstall -Full -DbPasswd '$ecReT'
 
 - Full usage of uninstaller parameters, used for complete remove of Coach from system, **beware of losing data**, unsafe to use:
 
 .. code-block:: powershell
 
-		Uninstall-Coach -Full -DbSrv 'srv\ins' -DbUsr 'admin' -DbPasswd '$ecRT'
+		Coach-Uninstall -Full -DbSrv 'srv\ins' -DbUsr 'admin' -DbPasswd '$ecReT'
 
 
 Parameters
