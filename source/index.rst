@@ -3,13 +3,24 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to coach-installer's documentation!
-===========================================
+Welcome to Qualtrak Coach Installer documentation!
+==================================================
+
+.. note::
+
+    *Qualtrak Coach Installer* is written in *Powershell* and uses *Powershell* to
+    manage instalation. Apart from *Powershell*, for manipulating *SQL Server*
+    database is used *SQL Server* command line utility ``sqlcmd``.
 
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+
+   getting-started
+   installer
+   uninstaller
+   config-properties
 
 
 
@@ -19,4 +30,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
