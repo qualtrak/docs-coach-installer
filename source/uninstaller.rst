@@ -116,5 +116,3 @@ DbPasswd
     - Applicable only when ``Full`` parameter is used.
     - If not specified when ``Full`` parameter is used, it will stop script and wait for ``DbPasswd`` enter manually in prompt!
     - If ``DbPasswd`` value is whitespace it will terminate the script!
-
--------

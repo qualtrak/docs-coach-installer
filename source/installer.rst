@@ -1,5 +1,5 @@
 Full Installer
-=========
+==============
 
 The Qualtrak Coach Full Installer.
 
@@ -10,38 +10,42 @@ The Qualtrak Coach Installer installs:
 
 - Coach Web Application.
 - Recorder integration Web Service.
-- Scheduler Windows Service.
-- REST API (*Docs and Wrapper*)[Optional].
+- Coach Scheduler Windows Service.
+- Coach REST API (*Docs and Wrapper*)[Optional].
 
 .. warning::
   Please make sure to backup all your data before running *Qualtrak Coach Installer* to make sure of no data loss!
 
+
 Usage
 -----
 
-- Get Help for *Qualtrak Coach Installer* Cmdlet ``Coach-Install-Full``
+.. note::
+  Use ``config.ps1`` to set up *Coach Full Installer* to meet desired needs.
+
+- Get Help for *Qualtrak Coach Installer* Cmdlet ``Install-CoachFull``
 
 .. code-block:: powershell
 
-		Get-Help Coach-Install-Full -Full
-		Coach-Install-Full -?
+		Get-Help Install-CoachFull -Full
+		Install-CoachFull -?
 
-- Run ``Coach-Install-Full`` to install *Coach*. See "*Examples*" for more info or usage.
+- Run ``Install-CoachFull`` to install *Coach*. See *"Examples"* for more info or usage.
 
 Examples
 --------
 
 .. note::
-    - See more info about ``Coach-Install-Full`` parameters in "*Parameters*" section.
+    - See more info about ``Coach-Install-Full`` parameters in *"Parameters"* section.
     - Please use single quotes ('') around parameter values, double quotes ("") values evaluate as *Powershell* statement, so it can have undesired effect!
 
 - Minimal command with usage of required parameter ``DbPasswd``. If omitted, user will be prompted to enter manually:
 
 .. code-block:: powershell
 
-		Coach-Install-Full -DbPasswd 'secReT'
+		Coach-Install-Full -DbPasswd '$ecReT'
 
-Full example with all parameters. Note that "-SysPasswd" is only needed for first-install of Coach.:
+Full example with all parameters. Note that ``-SysPasswd`` is only needed for first-install of Coach.:
 
 .. code-block:: powershell
 
@@ -121,5 +125,3 @@ SysPasswd
     - If not specified on *Coach* first-install it will stop script and wait for ``SysPasswd`` enter manually in prompt!
     - If ``SysPasswd`` value is empty or whitespace it will terminate the script!
     - If used on *Coach* release update will display warning, because in that case ``SysPasswd`` will be completely ignored by install.
-
--------

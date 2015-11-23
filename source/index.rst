@@ -19,6 +19,9 @@ Contents:
 
    getting-started
    installer
+   installer-app
+   installer-scheduler
+   installer-db
    uninstaller
    config-properties
 

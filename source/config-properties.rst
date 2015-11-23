@@ -63,7 +63,7 @@ Whether *SSL* should be enabled or not.
 -------
 
 Coach System Administrator Username
-.............................
+...................................
 
 Sets the *Coach* System Administrator username.
 This is only required for a first-time installation. Where Coach is being upgraded the *System Admininstrator Username* value will be ignored.
@@ -633,5 +633,3 @@ The ASP.NET caching IP address Port.
 **Default Value**
 
 	``42424``
-
--------
