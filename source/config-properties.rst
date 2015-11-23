@@ -514,22 +514,29 @@ The Database login (user) password that the Recorder uses for persisting recordi
 HA (High Availability)
 ----------------------
 
-HA specific properties currently for File sharing and Caching.
-Applicable only for Coach App Installer and its config file: ``config.app.ps1``.
+HA specific properties currently for ASP.NET Identity/Shared Folder, ASP.NET Session State and Database.
 
-Those properties are included in ``config.app.ps1``, but commented out by default.
+.. note::
+  HA properties are included in all config files, except ``config.db.ps1``, but commented out by default.
 
-To setup HA:
 
-* **Fileshare**: it is required to set values for File share Username, Password and Path. If not. it will not be applied!
-* **Caching**: it is required to set values for Caching Mode, IP and Port. If not, it will not be applied!
+.. note::
+  To setup HA:
+  * **ASP.NET Identity and Shared Folder**: it is required to set values for File share Username, Password and Path. If not. it will not be applied!
+  * **ASP.NET Session State: State Server**: it is required to set values for Session State mode (as `StateServer`), IP address and port. If not, it will not be applied!
+  * **ASP.NET Session State: SQL Server**: it is required to set values for Session State mode (as 'SQLServer'), SQL Server IP address and SQL Server Failover Partner IP address.
+  * **Datbase**: it is required to set values for SQL Server IP address and SQL Server Failover Partner IP address.
 
 -------
 
-File share Username
-...................
+ASP.NET Identity and Shared Folder
+..................................
 
-The File share username used for Coach attachments folder on server.
+
+File share Username
++++++++++++++++++++
+
+The File share username used for Coach attachments folder on server as ASP.NET Identity.
 
 **Property Name**
 
@@ -544,9 +551,9 @@ The File share username used for Coach attachments folder on server.
 -------
 
 File share Password
-...................
++++++++++++++++++++
 
-The File share password used for Coach attachments folder on server.
+The File share password used for Coach attachments folder on server as ASP.NET Identity.
 
 **Property Name**
 
@@ -561,7 +568,7 @@ The File share password used for Coach attachments folder on server.
 -------
 
 File share Path
-...............
++++++++++++++++
 
 The File share path used for Coach attachments folder on server.
 
@@ -577,37 +584,43 @@ The File share path used for Coach attachments folder on server.
 
 -------
 
-Caching Mode
-............
+ASP.NET Session State
+.....................
 
-The ASP.NET caching mode, currently only supported is `StateServer` in future there will be support for `SqlServer` caching mode.
+Session State Mode
+++++++++++++++++++
+
+The ASP.NET session state mode, supported is both ``StateServer`` and ``SqlServer`` ASP.NET Session State mode.
 
 **Property Name**
 
     .. code-block:: powershell
 
-    		$cachingMode
+    		$sessionStateMode
 
 **Value**
 
-	Single quoted string. Currently only supported is `StateServer`.
+	Single quoted string.
 
 **Default Value**
 
-	``'StateServer'``
+	``'SQLServer'``
 
 -------
 
-Caching IP
-..........
+ASP.NET Session State: State Server
+...................................
 
-The ASP.NET caching IP address.
+Session State IP address
+++++++++++++++++++++++++
+
+The ASP.NET Session State Server IP address.
 
 **Property Name**
 
     .. code-block:: powershell
 
-    		$cachingIp
+    		$sessionStateIP
 
 **Value**
 
@@ -615,16 +628,16 @@ The ASP.NET caching IP address.
 
 -------
 
-Caching Port
-............
+Session State Port
+++++++++++++++++++
 
-The ASP.NET caching IP address Port.
+The ASP.NET Session State IP address Port.
 
 **Property Name**
 
     .. code-block:: powershell
 
-		    $cachingPort
+		    $sessionStatePort
 
 **Value**
 
@@ -633,3 +646,143 @@ The ASP.NET caching IP address Port.
 **Default Value**
 
 	``42424``
+
+Database & ASP.NET Session State: SQL Server
+................................................
+
+SQL Server IP address
++++++++++++++++++++++
+
+The SQL Server IP address.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+    		$sqlServerIP
+
+**Value**
+
+	Single quoted string. Valid IP address or DNS name.
+
+-------
+
+SQL Server Failover Partner IP address
+++++++++++++++++++++++++++++++++++++++
+
+The SQL Server Failover Partner IP address.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+    		$sqlServerFailoverPartnerIP
+
+**Value**
+
+	Single quoted string. Valid IP address or DNS name.
+
+-------
+
+TLM (Tenant and Licensing management & real-time Monitoring)
+------------------------------------------------------------
+
+TLM (Coach Tenant and License Management) properties that will set up the URI of TLM.
+
+.. note::
+  Available in ``config.ps1`` and in ``config.tlm.ps1``.
+
+-------
+
+TLM IP address
+..............
+
+TLM (Tenant and Licensing management & real-time Monitoring) IP address.
+Port for IP address is set from property ``StartingPort`` and it is usually one number higher
+``StartingPort``, e.g. if ``StartingPort`` is ``9000`` the TLM IP address port will be ``9001``.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+		    $tlmIp
+
+**Value**
+
+	Single quoted string. Valid IP address or DNS name.
+
+**Default Value**
+
+	``'127.0.0.1'``
+
+-------
+
+Akka Coach Seed
+---------------
+
+Akka Coach seed specific properties. Where seed node list is used in all *Coach Akka Win Services*.
+Available in all configs except ``config.db.ps1``, for seed nodes list and starting port,
+and Public IP address available only in *HA* installation.
+
+-------
+
+Seed Public IP address
+......................
+
+Coach Akka Seed IP address. Only applicable for *HA* installations.
+Port is used from property ``StartingPort`` but it is only used when it is a *HA* installation.
+For *non-HA* installation port ``0`` is used.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+    		$seedPublicHostname
+
+**Value**
+
+	Single quoted string. Valid IP address or DNS name.
+
+-------
+
+Starting Port
+.............
+
+Port for *Coach Akka Seed* IP address and TLM IP address.
+In *non-HA* installation used only for TLM IP address port, in *HA* installation can be
+used with installer switch ``-StartingPort`` to apply sliding ports on multiple VM's
+since port must be unique on multiple VM's for same *Seed Public IP address*.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+		    $global:startingPort
+
+**Value**
+
+	Integer value. Greater than zero (0).
+
+**Default Value**
+
+	``9000``
+
+
+Seed Nodes list
+...............
+
+List of multiple *Coach Akka* seed nodes.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+		    $seedNodes
+
+**Value**
+
+	Powrshell array ``@()`` of single quoted string and comma separated. [IP|DNS]:Port format.
+
+**Default Value**
+
+	``@('127.0.0.1:9001')``
