@@ -20,7 +20,7 @@ Contents:
    getting-started
    installer
    installer-app
-   installer-scheduler
+   installer-intellisearch
    installer-db
    uninstaller
    config-properties
