@@ -40,18 +40,23 @@ Usage
 * Run ``Install-CoachIntelliSearch`` to install *Coach IntelliSearch*. See *"Examples"* for more info or usage.
 
 Examples
+--------
 
-  - Minimal command usage. It will install both IntelliSearch Windows services (Producer and Consumer):
+.. note::
+    - See more info about ``Coach-Install-Full`` parameters in *"Parameters"* section.
+    - Please use single quotes ('') around parameter values, double quotes ("") values evaluate as *Powershell* statement, so it can have undesired effect!
 
-    .. code-block:: powershell
+- Minimal command usage. It will install both IntelliSearch Windows services (Producer and Consumer):
 
-    	Install-CoachIntelliSearch
+  .. code-block:: powershell
 
-  - Full command usage:
+  	Install-CoachIntelliSearch
 
-    .. code-block:: powershell
+- Full command usage:
 
-      Install-CoachIntelliSearch -Install Consumer  -HA -StartingPort 9000
+  .. code-block:: powershell
+
+    Install-CoachIntelliSearch -Install Consumer -HA -StartingPort 9000
 
 
 Parameters

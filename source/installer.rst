@@ -13,7 +13,7 @@ The Qualtrak Coach Installer installs:
 - IntelliSearch Windows Services (Producer and Consumer).
 - TLM (Tenant and Licensing management & real-time Monitoring) Web App and Windows Service.
 - Akka Coach Seed Windows Service
-- Coach REST API (*Docs and Wrapper*)[Optional].
+- Coach REST API (*C# Wrapper*)[Optional].
 
 .. warning::
   Please make sure to backup all your data before running *Qualtrak Coach Installer* to make sure of no data loss!
@@ -38,20 +38,20 @@ Examples
 --------
 
 .. note::
-    - See more info about ``Coach-Install-Full`` parameters in *"Parameters"* section.
+    - See more info about ``Install-CoachFull`` parameters in *"Parameters"* section.
     - Please use single quotes ('') around parameter values, double quotes ("") values evaluate as *Powershell* statement, so it can have undesired effect!
 
 - Minimal command with usage of required parameter ``DbPasswd``. If omitted, user will be prompted to enter manually:
 
   .. code-block:: powershell
 
-  		Coach-Install-Full -DbPasswd '$ecReT'
+  		Install-CoachFull -DbPasswd '$ecReT'
 
 Full example with all parameters. Note that ``-SysPasswd`` is only needed for first-install of Coach.:
 
   .. code-block:: powershell
 
-  		Coach-Install-Full -DbSrv 'srv\ins' -DbUsr 'admin' -DbPasswd '$ecReT' -RecorderIP '10.0.0.1' -SysPasswd 'P@$$w0rd'  -HA -StartingPort 9000
+  		Install-CoachFull -DbSrv 'srv\ins' -DbUsr 'admin' -DbPasswd '$ecReT' -RecorderIP '10.0.0.1' -SysPasswd 'P@$$w0rd' -HA -StartingPort 9000
 
 
 Parameters

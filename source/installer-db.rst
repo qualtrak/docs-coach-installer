@@ -20,10 +20,10 @@ Usage
 
 - Get Help for *Qualtrak Coach Databse Installer* Cmdlet ``Install-CoachDb``
 
-.. code-block:: powershell
+  .. code-block:: powershell
 
-		Get-Help Install-CoachDb -Full
-		Install-CoachDb -?
+  		Get-Help Install-CoachDb -Full
+  		Install-CoachDb -?
 
 * Run ``Install-CoachDb`` to install *Coach*. See *"Examples"* for more info or usage.
 
@@ -36,15 +36,15 @@ Examples
 
 - Minimal command with usage of required parameter ``DbPasswd``. If omitted, user will be prompted to enter manually:
 
-.. code-block:: powershell
+  .. code-block:: powershell
 
-		Install-CoachDb -DbPasswd '$ecReT'
+  		Install-CoachDb -DbPasswd '$ecReT'
 
 - Full example with all parameters. Note that ``-SysPasswd`` is only needed for first-install of Coach:
 
-.. code-block:: powershell
+  .. code-block:: powershell
 
-		Install-CoachDb -DbSrv 'srv\ins' -DbUsr 'admin' -DbPasswd '$ecReT' -RecorderIP '10.0.0.1' -SysPasswd 'P@$$w0rd'
+  		Install-CoachDb -DbSrv 'srv\ins' -DbUsr 'admin' -DbPasswd '$ecReT' -RecorderIP '10.0.0.1' -SysPasswd 'P@$$w0rd'
 
 
 Parameters
@@ -73,7 +73,7 @@ DbUsr
 
 - Specifies the *SQL Server* database server\instance user login name.
 - This value is not **persisted or saved** in any way, it is **only** for lifetime of installation session.
-- General default value can be changed in ``config.ps1`` for property ``$dbLoginName`` it is by default set to ``$null``.
+- General default value can be changed in ``config.db.ps1`` for property ``$dbLoginName`` it is by default set to ``$null``.
 
 .. note::
 
@@ -93,16 +93,3 @@ DbPasswd
 
     - If not specified will stop script and wait for ``DbPasswd`` enter manually in prompt!
     - If ``DbPasswd`` value is whitespace it will terminate the script!
-
--------
-
-RecorderIP
-..........
-
-- Specifies the Recorder IP address with any valid IP Address or DNS name.
-- General default value can be changed in ``config.ps1`` for property ``$recorderIpAddress`` it is by default set to ``localhost``.
-
-.. note::
-
-    - If ``RecorderIP`` parameter **will always override** ``config.ps1`` property ``$recorderIpAddress``!
-    - If you want to use general default value use ``config.ps1`` property ``$recorderIpAddress``, if it is changeable use this ``RecorderIP`` Parameter.
