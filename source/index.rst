@@ -21,6 +21,7 @@ Contents:
    installer
    installer-app
    installer-intellisearch
+   installer-tlm
    installer-db
    uninstaller
    config-properties
