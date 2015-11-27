@@ -83,5 +83,5 @@ StartingPort
 
 .. note::
 
-  - If ``StartingPort`` parameter **will always override** ``config.app.ps1`` property ``$global:startingPort``!
-  - If you want to use general default value use ``config.app.ps1`` property ``$global:startingPort``, if it is changeable use this ``StartingPort`` Parameter.
+  - If ``StartingPort`` parameter **will always override** ``config.tlm.ps1`` property ``$global:startingPort``!
+  - If you want to use general default value use ``config.tlm.ps1`` property ``$global:startingPort``, if it is changeable use this ``StartingPort`` Parameter.
