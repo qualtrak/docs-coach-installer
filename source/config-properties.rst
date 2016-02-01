@@ -522,6 +522,7 @@ HA specific properties currently for ASP.NET Identity/Shared Folder, ASP.NET Ses
 
 .. note::
   To setup HA:
+  
   * **ASP.NET Identity and Shared Folder**: it is required to set values for File share Username, Password and Path. If not. it will not be applied!
   * **ASP.NET Session State: State Server**: it is required to set values for Session State mode (as `StateServer`), IP address and port. If not, it will not be applied!
   * **ASP.NET Session State: SQL Server**: it is required to set values for Session State mode (as 'SQLServer'), SQL Server IP address and SQL Server Failover Partner IP address.
