@@ -668,6 +668,58 @@ The SQL Server IP address.
 
 -------
 
+SQL Server Catalog (Db)
++++++++++++++++++++++
+
+The SQL Server Catalog/Db if session state for Sql Server should be different from default Coach Db.
+Use this property option when Session State for Sql Server should have different DB than default Coach Db.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+    		$sqlServerCatalog
+
+**Value**
+
+	Single quoted string. 
+
+-------
+SQL Server User ID (Login)
++++++++++++++++++++++
+
+The SQL Server Userd ID (Sql Server login) for given Catalog/Db if session state for Sql Server should be different from default Coach Db.
+Use this property option when Session State for Sql Server should have different DB than default Coach Db.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+    		$sqlServerUserID
+
+**Value**
+
+	Single quoted string. 
+
+-------
+SQL Server Password
++++++++++++++++++++++
+
+The SQL Server Userd ID (Sql Server login) password for given Catalog/Db if session state for Sql Server should be different from default Coach Db.
+Use this property option when Session State for Sql Server should have different DB than default Coach Db.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+    		$sqlServerPassword
+
+**Value**
+
+	Single quoted string. 
+
+-------
+
 SQL Server Failover Partner IP address
 ++++++++++++++++++++++++++++++++++++++
 
