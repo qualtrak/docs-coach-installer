@@ -14,9 +14,17 @@ Welcome to Qualtrak Coach Installer documentation!
 
 Contents:
 
+   
 .. toctree::
    :maxdepth: 1
-
+   :caption: Quickstart
+      
+   fresh-install
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: Installers
+   
    getting-started
    installer
    installer-app
@@ -24,6 +32,11 @@ Contents:
    installer-tlm
    installer-db
    uninstaller
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: Configuration   
+   
    config-properties
 
 

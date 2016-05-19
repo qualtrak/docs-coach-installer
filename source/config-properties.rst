@@ -1,3 +1,6 @@
+.. _config-properties:
+
+======================
 Config file properties
 ======================
 
@@ -669,7 +672,7 @@ The SQL Server IP address.
 -------
 
 SQL Server Catalog (Db)
-+++++++++++++++++++++
++++++++++++++++++++++++
 
 The SQL Server Catalog/Db if session state for Sql Server should be different from default Coach Db.
 Use this property option when Session State for Sql Server should have different DB than default Coach Db.
@@ -685,8 +688,9 @@ Use this property option when Session State for Sql Server should have different
 	Single quoted string. 
 
 -------
+
 SQL Server User ID (Login)
-+++++++++++++++++++++
+++++++++++++++++++++++++++
 
 The SQL Server Userd ID (Sql Server login) for given Catalog/Db if session state for Sql Server should be different from default Coach Db.
 Use this property option when Session State for Sql Server should have different DB than default Coach Db.
@@ -702,8 +706,9 @@ Use this property option when Session State for Sql Server should have different
 	Single quoted string. 
 
 -------
+
 SQL Server Password
-+++++++++++++++++++++
++++++++++++++++++++
 
 The SQL Server Userd ID (Sql Server login) password for given Catalog/Db if session state for Sql Server should be different from default Coach Db.
 Use this property option when Session State for Sql Server should have different DB than default Coach Db.
