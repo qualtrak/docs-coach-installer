@@ -1,7 +1,7 @@
 Fresh Install
 =============
 
-.. note::
+.. important::
 
  Before installing *Qualtrak Coach Installer* please make sure that system requirements are met and `server is configured for Coach <http://data-connector-api.readthedocs.io/en/latest/server.html#server-deploy-label>`_.
 
@@ -19,9 +19,11 @@ Checklist
 
  Currently installer only support Database users with SQL Authorization. SQL Server Windows Authentication is not supported.
 
-.. note::
+.. important::
 
- For Coach IntegrationSDK install partners, please before running install make sure to overwrite ``02_partner_integrationsdk.sql`` with your own integration SQL file in *<installer folder>\\db*.
+ For Coach IntegrationSDK install partners, please before running install make sure to overwrite ``02_partner_integrationsdk.sql`` with your own Coach integration T-SQL file in *<installer folder>\\db*.
+ 
+ If the Recorder IP address used during the Integration Testing is different for this deployment then please open up the T-SQL script (``02_partner_integrationsdk.sql``) received from the Integration Tool and change the Recorder IP address there.
 
 Pre-Install
 -----------
