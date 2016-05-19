@@ -10,14 +10,14 @@ Checklist
 
 .. note::
 
- Currently if ``sa`` or SQL server system user is not avaialble. It is possible to use on first time created Coach SQL server user ``AspireUser``, it has a default password set to ``password``. 
- If this is a security issue ask DB admin to create new password for user ``AspireUser`` and usi it in install.
+ Currently if ``sa`` or SQL server system user is not avaialble. It is possible to use Coach SQL server user ``AspireUser`` created on fresh install, it has a default password set to ``password``. 
+ If this is a security issue ask DB admin to create new password for user ``AspireUser`` and use it in install.
 
  Currently installer only support Database users with SQL Authorization. SQL Server Windows Authentication is not supported.
 
 .. important::
 
- For Coach IntegrationSDK install partners, please before running install make sure to overwrite ``02_partner_integrationsdk.sql`` with your own Coach integration T-SQL file in *<installer folder>\\db*.
+ For Coach IntegrationSDK install partners, please before running install make sure to overwrite ``02_partner_integrationsdk.sql`` with your own Coach integration T-SQL file in *<installer folder>\\db*. Make sure that you use script file with Recorder IP adress set for this deployment.
  
 
 Pre-Install
