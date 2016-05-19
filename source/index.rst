@@ -20,6 +20,7 @@ Contents:
    :caption: Quickstart
       
    fresh-install
+   update-install
    
 .. toctree::
    :maxdepth: 1
