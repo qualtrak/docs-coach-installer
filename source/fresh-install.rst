@@ -48,7 +48,7 @@ Installation
 
 .. code-block:: shell
 
-        Install-CoachFull -DbPasswd <db user password> -SysPasswd <coach system administrator password>
+        Install-CoachFull -DbPasswd '<db user password>' -SysPasswd '<coach system administrator password>'
         
 .. note::
 
