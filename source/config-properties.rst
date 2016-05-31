@@ -42,6 +42,29 @@ The install path for *Coach Installer*. Some development work outstanding so ple
 	- ``'C:\Program Files'`` [x86]
 	- ``'C:\Program Files (x86)'`` [x64]
 
+
+-------
+
+Log Level
+.........
+
+Sets logging level for a Coach logging.
+
+**Property Name**
+
+    .. code-block:: powershell
+
+    		$logLevel
+
+**Value**
+
+	Single quoted string. Possible values: ``'Error'``, ``'Information'``, ``'Debug'``, ``'Verbose'``.
+
+**Default Value**
+
+	``'Error'``
+
+
 -------
 
 SSL
@@ -525,7 +548,7 @@ HA specific properties currently for ASP.NET Identity/Shared Folder, ASP.NET Ses
 
 .. note::
   To setup HA:
-  
+
   * **ASP.NET Identity and Shared Folder**: it is required to set values for File share Username, Password and Path. If not. it will not be applied!
   * **ASP.NET Session State: State Server**: it is required to set values for Session State mode (as `StateServer`), IP address and port. If not, it will not be applied!
   * **ASP.NET Session State: SQL Server**: it is required to set values for Session State mode (as 'SQLServer'), SQL Server IP address and SQL Server Failover Partner IP address.
@@ -604,7 +627,7 @@ The ASP.NET session state mode, supported is both ``StateServer`` and ``SqlServe
 
 **Value**
 
-	Single quoted string.
+	Single quoted string. Supported values: ``'StateServer``, ``'SqlServer'``.
 
 **Default Value**
 
@@ -685,7 +708,7 @@ Use this property option when Session State for Sql Server should have different
 
 **Value**
 
-	Single quoted string. 
+	Single quoted string.
 
 -------
 
@@ -703,7 +726,7 @@ Use this property option when Session State for Sql Server should have different
 
 **Value**
 
-	Single quoted string. 
+	Single quoted string.
 
 -------
 
@@ -721,7 +744,7 @@ Use this property option when Session State for Sql Server should have different
 
 **Value**
 
-	Single quoted string. 
+	Single quoted string.
 
 -------
 
